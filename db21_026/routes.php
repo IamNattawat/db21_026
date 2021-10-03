@@ -1,5 +1,6 @@
 <?php
-$controllers = array('pages'=>['home','error'],'quotation'=>['index','newQuotation','addQuotation','search','updateForm','update','deleteConfirm','delete']);
+$controllers = array('pages'=>['home','error'],'quotation'=>['index','newQuotation','addQuotation','search','updateForm','update','deleteConfirm','delete']
+                    ,'quotationlist'=>['index','newQuotationlist','addQuotationlist','search','updateForm','update','deleteConfirm','delete']);
 
 function call($controller,$action){
     require_once("controllers/".$controller."_controller.php");
@@ -13,6 +14,13 @@ function call($controller,$action){
             require_once("models/employeeModel.php");
             $controller = new QuotationController();
             break;
+        case 'quotationlist':
+            require_once("models/quotationlistModel.php");
+            require_once("models/quotationModel.php");
+            require_once("models/colorModel.php");
+            $controller = new QuotationlistController();
+            break;
+
     }
     $controller->{$action}();
 }
