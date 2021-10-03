@@ -46,14 +46,15 @@ class QuotationController
 
     public function update()
     {
-        $C_No = $_GET["C_No"];
+        $AC_No = $_GET["AC_No"];
+        $BC_No = $_GET["BC_No"];
         $Date = $_GET["Date"];
         $Em_ID = $_GET["Em_ID"];
         $Cus_ID = $_GET["Cus_ID"];
         $Deposit = $_GET["Deposit"];
         $Credit_Day = $_GET["Credit_Day"];
 
-        Quotation::update($C_No,$Date,$Em_ID,$Cus_ID,$Deposit,$Credit_Day);
+        Quotation::update($AC_No,$BC_No,$Date,$Em_ID,$Cus_ID,$Deposit,$Credit_Day);
         QuotationController::index();
     }
 

@@ -102,11 +102,11 @@ class Quotation{
         require("connection_close.php");
     }
 
-    public static function update($C_No,$Date,$Em_ID,$Cus_ID,$Deposit,$Credit_Day)
+    public static function update($AC_No,$BC_No,$Date,$Em_ID,$Cus_ID,$Deposit,$Credit_Day)
     {
         require("connection_connect.php");
-        $sql = "UPDATE Certificate SET C_No = '$C_No', Date = '$Date', Employee_ID = '$Em_ID',
-        Customer_ID = '$Cus_ID', Deposit = '$Deposit', Credit_Day = '$Credit_Day' WHERE C_No = '$C_No'";
+        $sql = "UPDATE Certificate SET C_No = '$AC_No', Date = '$Date', Employee_ID = '$Em_ID',
+        Customer_ID = '$Cus_ID', Deposit = '$Deposit', Credit_Day = '$Credit_Day' WHERE C_No = '$BC_No'";
         $result = $conn->query($sql);
         if($result === TRUE){
             echo "update success $result row <br>";
