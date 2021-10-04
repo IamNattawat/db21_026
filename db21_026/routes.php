@@ -1,6 +1,7 @@
 <?php
 $controllers = array('pages'=>['home','error'],'quotation'=>['index','newQuotation','addQuotation','search','updateForm','update','deleteConfirm','delete']
-                    ,'quotationlist'=>['index','newQuotationlist','addQuotationlist','search','updateForm','update','deleteConfirm','delete']);
+                    ,'quotationlist'=>['index','newQuotationlist','addQuotationlist','search','updateForm','update','deleteConfirm','delete'],
+                    'productLevelPrice'=>['index','newProductLevelPrice','addProductLevelPrice','search','updateForm','update','deleteConfirm','delete']);
 
 function call($controller,$action){
     require_once("controllers/".$controller."_controller.php");
@@ -19,6 +20,11 @@ function call($controller,$action){
             require_once("models/quotationModel.php");
             require_once("models/colorModel.php");
             $controller = new QuotationlistController();
+            break;
+        case "productLevelPrice": 
+            require_once("models/productLevelPriceModel.php");
+            require_once("models/productModel.php");
+            $controller = new ProductLevelPriceController(); 
             break;
 
     }

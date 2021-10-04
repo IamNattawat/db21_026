@@ -1,4 +1,4 @@
-<br>
+<h1>ทรัพย์อนันต์ เงินแจ่ม 6220500628</h1>
 new quotation <a href="?controller=quotation&action=newQuotation">click</a>
 <form method="get" action="">
     <input type="text" name="key">

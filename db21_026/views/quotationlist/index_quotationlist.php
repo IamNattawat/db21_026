@@ -1,5 +1,4 @@
-
-<br>
+<h1>ณัฐวัตร ศรีพัฒน์พิริยกุล 6220502108</h1>
 new quotationlist <a href="?controller=quotationlist&action=newQuotationlist">click</a>
 <form method="get" action="">
     <input type="text" name="key">
